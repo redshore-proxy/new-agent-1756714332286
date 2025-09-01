@@ -272,7 +272,8 @@ const SurveyAssistant: React.FC = () => {
       const newSurveyData = { ...surveyData };
       let processedValue = value;
 
-      // Special handling for multi-selects that map to objects in schema      if (currentQuestion.type === "multi-select-with-other") {
+      // Special handling for multi-selects that map to objects in schema      
+      if (currentQuestion.type === "multi-select-with-other") {
         const selectedLabels = value as string[];
         const otherLabelKey = currentQuestion.key === "basic_profile.ancestries" ? "Other" :
                               currentQuestion.key === "medical_history.conditions" ? "Other" :
