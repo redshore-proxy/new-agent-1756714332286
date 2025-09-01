@@ -297,7 +297,8 @@ const SurveyAssistant: React.FC = () => {
         // Handle "All" for CAM fields
         if (currentQuestion.key === "miscellaneous.cam_fields" && selectedLabels.includes("All")) {
           processedValue = CAM_FIELDS_OPTIONS.filter(o => o.value !== "All").map(o => o.value);
-          // Handle synonymsprocessedValue = processedValue.map((item: string) => {
+          // Handle synonyms
+          processedValue = processedValue.map((item: string) => {
             if (item === "TCM") return "Traditional Chinese Medicine";
             if (item === "Hanbang/Korean Medicine") return "Hanyak";
             return item;
