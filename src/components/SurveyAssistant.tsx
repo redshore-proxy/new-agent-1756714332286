@@ -445,7 +445,8 @@ const SurveyAssistant: React.FC = () => {
     setShowJson(true);
   };
 
-  // Simulate "done/finish/stop" command from user input  useEffect(() => {
+// Simulate "done/finish/stop" command from user input  
+useEffect(() => {
     if (currentQuestion.type === "input" || currentQuestion.type === "textarea") {
       const currentValue = getNestedValue(surveyData, currentQuestion.key as string);if (typeof currentValue === 'string' && (currentValue.toLowerCase() === "done" || currentValue.toLowerCase() === "finish" || currentValue.toLowerCase() === "stop")) {
         finishSurvey();
